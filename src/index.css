@@ -14,6 +14,7 @@ body {
   background-color: #1A1B21;
   margin: 0 auto;
   width: 317px;
+  border-radius: 0px 0px 10px 10px;
 }
 
 /** HEADER **/
@@ -105,9 +106,9 @@ p {
 footer {
   height: 64px;
   background-color: #161619;
-  border-radius: 0px 0px 10px 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 23.5px;
+  border-radius: 0px 0px 10px 10px;
 }
