@@ -1,34 +1,24 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import React from 'react'
+import profilePic from './assets/Rectangle 90.png'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+export default function App() {
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className="business-card">
+      <img src={profilePic} />
+      <div className="card-details">
+        <div className="card-title">
+          <h2>Laura Smith</h2>
+          <h5>Frontend Developer</h5>
+          <a className="website" href="laurasmith.website">laurasmith.website</a>
+        </div>
+        <div className="card-contact">
+          <button className="mail-btn"><FontAwesomeIcon icon={faEnvelope} />Email</button>
+          <button className="linkedin-btn"><img src="./src/assets/linkedin.png" />LinkedIn</button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </div>
   )
 }
-
-export default App
